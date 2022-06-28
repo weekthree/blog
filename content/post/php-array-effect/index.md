@@ -161,5 +161,5 @@ echo "存在元素个数{$nums}个";
 过上面三个例子，我们发现不仅仅是慢速 SQL 会导致我们的程序变慢，不恰当的内置函数的使用也是需要重视的一个点。那么如何在享受内置函数便利的同时，又规避性能陷阱呢？
 这就需要我们对日常高频使用的相关函数的时间复杂度和执行方式都要有个大致的了解，这样才能在不同的场景中找到最适合的函数，也能在出现问题后快速定位，寻找别的实现方式替代。
 ## 参考资料
-[List of Big-O for PHP functions](https://stackoverflow.com/questions/2473989/list-of-big-o-for-php-functions)  
-[PHP 手册- Manual](https://www.php.net/manual/zh/function.in-array.php)
+1. [List of Big-O for PHP functions](https://stackoverflow.com/questions/2473989/list-of-big-o-for-php-functions)  
+2. [PHP 手册- Manual](https://www.php.net/manual/zh/function.in-array.php)
