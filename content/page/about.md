@@ -1,33 +1,27 @@
 ---
-title: About
-description: Hugo, the world's fastest framework for building websites
-date: '2019-02-28'
-aliases:
-  - about-us
-  - about-hugo
-  - contact
-license: CC BY-NC-ND
-lastmod: '2020-10-09'
-menu:
-    main: 
-        weight: -90
-        pre: user
+title: "关于"
+date: 2019-05-28
+layout: "about"
+slug: "about"
+
 ---
+# 个人信息
+91 年生人，男，坐标阿卡林省南昌市。
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+兴趣使然的码仔。
 
-Hugo makes use of a variety of open source projects including:
+希望通过记录，让知识汇聚成大海。
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
-
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
-
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
-
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+泰山不让土壤,故能成其大。河海不择细流,故能就其深。
+# 技能清单
+* 开发语言：PHP / Go / Python
+* 数据库：MySQL / Redis(Pika) / Elasticsearch / ClickHouse
+* 框架：Laravel / ThinkPHP / Hyperf / Gin / Scrapy / Selenium
+* 版本控制：Git / Svn
+* 依赖管理：Composer / Go Module
+* 运维：Linux / Nginx / Docker
+* 基础：设计模式 / 数据结构
+* 消息队列：Redis 队列 / kafka
+* 高并发：Swoole / Go 协程
+* 通信协议：HTTP(S) / TCP / Websocket
+* 其它：爬虫 / fineBI / Apifox / OAuth 2.0 / 推荐系统 / jwt / 正则 / 小程序 / 微信公众号 / 支付

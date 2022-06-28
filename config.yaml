@@ -23,7 +23,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: img/favicon.ico
+    favicon: /img/favicon.ico
 
     footer:
         since: 2020
@@ -136,6 +136,22 @@ menu:
           url: /
           weight: -100
           pre: home
+        - identifier: about
+          name: 关于
+          url: /about
+          weight: -100
+          pre: user
+        - identifier: archives
+          name: 归档
+          url: /archives
+          weight: -100
+          pre: archives
+        - identifier: search
+          name: 搜索
+          url: /search
+          weight: -100
+          pre: search
+
 
 related:
     includeNewer: true
