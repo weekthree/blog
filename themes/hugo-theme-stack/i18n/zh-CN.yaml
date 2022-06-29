@@ -11,11 +11,14 @@ article:
     tableOfContents:
         other: 目录
 
-    relatedContents:
+    relatedContent:
         other: 相关文章
 
     lastUpdatedOn:
         other: 最后更新于
+
+    readingTime:
+        other: "阅读时长: {{ .Count }} 分钟"
 
 notFound:
     title:
@@ -35,6 +38,10 @@ widget:
         title:
             other: 标签云
 
+    categoriesCloud:
+        title:
+            other: 分类
+
 search:
     title:
         other: 搜索
@@ -44,3 +51,10 @@ search:
 
     resultTitle:
         other: "#PAGES_COUNT 个结果 （用时 #TIME_SECONDS 秒）"
+
+footer:
+    builtWith:
+        other: Built with {{ .Generator }}
+
+    designedBy:
+        other: 主题 {{ .Theme }} 由 {{ .DesignedBy }} 设计

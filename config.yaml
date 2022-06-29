@@ -4,6 +4,7 @@ theme: hugo-theme-stack
 paginate: 5
 title: 随笔记
 
+
 # Change it to your Disqus shortname before using
 disqusShortname: hugo-theme-stack
 
@@ -11,8 +12,12 @@ disqusShortname: hugo-theme-stack
 googleAnalytics:
 
 # Theme i18n support
-# Available values: en, fr, id, ja, ko, pt-br, zh-cn, es, de, nl
+# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
 DefaultContentLanguage: zh-cn
+
+# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+# This will make .Summary and .WordCount behave correctly for CJK languages.
+hasCJKLanguage: false
 
 permalinks:
     post: /p/:slug/
@@ -26,7 +31,7 @@ params:
     favicon: /img/favicon.ico
 
     footer:
-        since: 2020
+        since: 2019
         customText: 让知识汇聚成大海
 
     dateFormat:
@@ -37,21 +42,28 @@ params:
         emoji: 🍥
         subtitle: 泰山不让土壤,故能成其大。河海不择细流,故能就其深。
         avatar:
+            enabled: true
             local: true
             src: img/avatar.png
 
     article:
-        readingTime: true
-        title: 文章
         math: false
         toc: true
+        readingTime: true
         license:
-            enabled: false
+            enabled: true
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
         enabled: true
         provider: disqus
+
+        disqusjs:
+            shortname:
+            apiUrl:
+            apiKey:
+            admin:
+            adminLabel:
 
         utterances:
             repo:
@@ -71,33 +83,68 @@ params:
             clientSecret:
             autoCreateIssue: false
 
-        # Waline client configuration see: https://waline.js.org/en/reference/client.html
+        # Waline client configuration see: https://waline.js.org/en/reference/component.html
         waline:
             serverURL:
             lang:
-            visitor:
-            avatar:
+            pageview:
             emoji:
-                - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
+                - https://unpkg.com/@waline/emojis@1.0.1/weibo
             requiredMeta:
                 - name
                 - email
                 - url
-            placeholder:
             locale:
                 admin: Admin
+                placeholder:
 
+        twikoo:
+            envId:
+            region:
+            path:
+            lang:
+
+        # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
+        cactus:
+            defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
+            serverName: "cactus.chat"
+            siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
+
+        giscus:
+            repo:
+            repoID:
+            category:
+            categoryID:
+            mapping:
+            lightTheme:
+            darkTheme:
+            reactionsEnabled: 1
+            emitMetadata: 0
+
+        gitalk:
+            owner:
+            admin:
+            repo:
+            clientID:
+            clientSecret:
+
+        cusdis:
+            host:
+            id:
     widgets:
-        enabled:
-            - search
-            - archives
-            - tag-cloud
-
-        archives:
-            limit: 5
-
-        tagCloud:
-            limit: 10
+        homepage:
+            - type: search
+            - type: archives
+              params:
+                  limit: 5
+            - type: categories
+              params:
+                  limit: 10
+            - type: tag-cloud
+              params:
+                  limit: 10
+        page:
+            - type: toc
 
     opengraph:
         twitter:
@@ -127,47 +174,67 @@ params:
             enabled: true
 
 ### Custom menu
-### See https://docs.stack.jimmycai.com/configuration/custom-menu
+### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
     main:
-        - identifier: home
-          name: 主页
-          url: /
-          weight: -100
-          pre: home
         - identifier: about
           name: 关于
           url: /about
           weight: -100
-          pre: user
+          params:
+              icon: user
         - identifier: archives
           name: 归档
           url: /archives
           weight: -100
-          pre: archives
+          params:
+              icon: archives
         - identifier: search
           name: 搜索
           url: /search
           weight: -100
-          pre: search
+          params:
+              icon: search
 
+    social:
+        - identifier: github
+          name: GitHub
+          url: https://github.com/weekthree/
+          params:
+              icon: github
+
+        - identifier: 语雀
+          name: 语雀
+          url: https://www.yuque.com/samuel-is4hb
+          params:
+              icon: yuque
 
 related:
     includeNewer: true
     threshold: 60
     toLower: false
     indices:
-        - name: 标签
+        - name: tags
           weight: 100
 
-        - name: 分类
+        - name: categories
           weight: 200
 
 markup:
+    goldmark:
+        renderer:
+            ## Set to true if you have HTML content inside Markdown
+            unsafe: false
     tableOfContents:
         endLevel: 4
         ordered: true
         startLevel: 2
     highlight:
         noClasses: false
+        codeFences: true
+        guessSyntax: true
+        lineNoStart: 1
+        lineNos: true
+        lineNumbersInTable: true
+        tabWidth: 4

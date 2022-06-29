@@ -23,11 +23,15 @@ article:
     tableOfContents:
         other: Spis treści
 
-    relatedContents:
+    relatedContent:
         other: Powiązane artykuły
 
     lastUpdatedOn:
         other: Ostatnio zaktualizowany
+    
+    readingTime:
+        one: "Przeczytasz w {{ .Count }} minutę"
+        other: "Przeczytasz w {{ .Count }} minut"
 
 notFound:
     title:
@@ -46,6 +50,10 @@ widget:
     tagCloud:
         title:
             other: Tagi
+    
+    categoriesCloud:
+        title:
+            other: Kategorie
 
 search:
     title:
