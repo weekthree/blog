@@ -2,7 +2,7 @@
 title: 友情链接
 links:
   - title: GitHub
-    description: Hugo blog 搭建
+    description: 全球最大同性交友网站。
     website: https://github.com/weekthree/blog
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
   - title: 语雀
