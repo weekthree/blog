@@ -1,6 +1,6 @@
 ---
 title: "推荐搜索:Completion Suggester"
-description: 
+description: 现代的搜索引擎，一般会具备“Suggest As You Type"功能，即在用户输入搜索的过程中，进行自动补全或者纠错。通过协助用户输入更精准的关键词，提供后续全文搜索阶段文档匹配程度。
 date: 2022-11-08T14:44:58+08:00
 image: 
 math: 
